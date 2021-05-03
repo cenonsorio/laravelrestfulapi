@@ -2,14 +2,19 @@
 
 A simple example of how to create a RESTful API in Laravel 8.
 
+composer install
+php artisan key:generate
+php artisan serve
+php artisan migrate
+
 ## Endpoints
 
-Get all posts: `GET /api/posts`
+GET http://restfulapi.localhost/api/questions
 
-Get a single post: `GET /api/posts/{id}`
+POST http://restfulapi.localhost/api/questions
+{ "question":"Question 1 - answer A", "question_types": "multiple", "child_questions": "0", "order":"1", "points":"10", "answers": "A" , "choices" : "A,B,C,D"}
 
-Create a new post: `POST /api/posts`
+PUT http://restfulapi.localhost/api/questions/1
+{ "question":"Question 1 - answer A updated", "question_types": "multiple", "child_questions": "0", "order":"1", "points":"10", "answers": "A" , "choices" : "A,B,C,D"}
 
-Update a post: `PUT /api/posts/{id}`
-
-Delete a post: `DELETE /api/posts/{id}`
+DELETE  http://restfulapi.localhost/api/questions/1
