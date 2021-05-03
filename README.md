@@ -14,7 +14,7 @@ GET http://restfulapi.localhost/api/questions
 POST http://restfulapi.localhost/api/questions
 { "question":"Question 1 - answer A", "question_types": "multiple", "child_questions": "0", "order":"1", "points":"10", "answers": "A" , "choices" : "A,B,C,D"}
 
-PUT http://restfulapi.localhost/api/questions/1
+PUT http://restfulapi.localhost/api/questions/{id}
 { "question":"Question 1 - answer A updated", "question_types": "multiple", "child_questions": "0", "order":"1", "points":"10", "answers": "A" , "choices" : "A,B,C,D"}
 
-DELETE  http://restfulapi.localhost/api/questions/1
+DELETE  http://restfulapi.localhost/api/questions/{id}
